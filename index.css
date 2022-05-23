@@ -1,0 +1,112 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+/* Custom CSS */
+/* Global */
+body {
+    background-color: #E8F9FD;
+    color: #2155CD;
+}
+
+/* NavBar */
+.nav-bg {
+    background-color: inherit;
+    font-family: 'Lato', sans-serif, 20px;
+    color: #0AA1DD;
+}
+
+.navbar-hover:hover {
+    background-color: greenyellow;
+    border-radius: 25%;
+}
+
+/* Home */
+div > h1 {
+    font-family: 'Raleway', sans-serif;
+}
+
+div > h4 {
+    font-family: 'Lato', sans-serif;
+}
+
+.image-border {
+    border: 5px solid #0AA1DD;
+    max-width: 50%;
+}
+
+.svg-home {
+    max-width: 80%;
+    left: -80px;
+    top: -80px;
+    z-index: -2;
+}
+
+/* About*/
+#about{
+    background-color: #79DAE8;
+    z-index: -1;
+}
+
+.about-h3 {
+    z-index: 2;
+}
+
+.svg-about {
+    /* min-width: 60%; */
+    max-width: 80%;
+    z-index: 1;
+}
+
+/* Tools */
+#tools {
+    background-color: #79DAE8;
+    text-align: center;
+}
+
+/* Contact */
+#map-size {
+    max-height: 60vh;
+    width: 100%;
+}
+
+.forms {
+    background-color: #79DAE8;
+}
+
+#button-bg {
+    background-color: #2155CD;
+    color: #E8F9FD;
+}
+
+/* Connect */
+.gmail-logo > img {
+    padding-bottom: 0.6rem;
+    width: 25px;
+}
+
+/* Footer */
+/* .copyright > p {
+    z-index: 2;
+} */
+
+/* media queries */
+/*tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .svg-home {
+        min-width: calc(80% - 177px);
+        left: -50px;
+        top: -50px;
+        z-index: -2;
+    }
+}
+
+/*mobile screen*/
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .svg-home {
+        min-width: relative;
+        left: 50px;
+        top: -50px;
+        z-index: -2;
+    }
+}
