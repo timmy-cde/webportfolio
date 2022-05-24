@@ -13,6 +13,10 @@ body {
     color: #2155CD;
 }
 
+p {
+    color: black;
+}
+
 /* NavBar */
 .navbar-brand, .nav-link{
 	text-shadow: 3px 3px 5px #0AA1DD;
