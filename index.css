@@ -14,15 +14,13 @@ body {
 }
 
 /* NavBar */
-.nav-bg {
-    background-color: inherit;
-    font-family: 'Lato', sans-serif, 20px;
-    color: #0AA1DD;
+.navbar-brand, .nav-link{
+	text-shadow: 3px 3px 5px #0AA1DD;
 }
 
 .navbar-hover:hover {
     background-color: greenyellow;
-    border-radius: 25%;
+    border-radius: 15%;
     transition: all 0.5s;
 }
 
@@ -38,15 +36,7 @@ div > h4 {
 .image-border {
     border: 5px solid #0AA1DD;
     max-width: 50%;
-    z-index: 5;
 }
-
-/* .svg-home {
-    width: 80%;
-    left: -80px;
-    top: -80px;
-    z-index: -1;
-} */
 
 /* About*/
 #about{
@@ -90,12 +80,31 @@ div > h4 {
 }
 
 /* media queries */
-/*laptop*/
-@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+/*laptop - 4k*/
+@media only screen and (min-width: 1441px) and (max-width: 2560px) {
     .svg-home {
-        width: 80%;
+        max-width: 47%;
         left: -80px;
         top: -80px;
+        z-index: -1;
+    }
+    
+    .image-border {
+        max-width: 30%;
+    }
+
+    .svg-about {
+        max-width: 15rem;
+        z-index: 1;
+    }
+}
+
+/*laptop*/
+@media only screen and (min-width: 1021px) and (max-width: 1440px) {
+    .svg-home {
+        max-width: 75%;
+        left: -80px;
+        top: -65px;
         z-index: -1;
     }
     
@@ -107,11 +116,12 @@ div > h4 {
 }
 
 /*tablet*/
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1020px) {
     .svg-home {
-        max-width: 75%;
+        min-width: 78%;
+        max-width: 80%;
         left: -50px;
-        top: -50px;
+        top: -60px;
         z-index: -1;
     }
 
@@ -124,7 +134,7 @@ div > h4 {
 /*mobile screen*/
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .svg-home {
-        width: relative;
+        max-width: 75%;
         left: 50px;
         top: -50px;
         z-index: -1;
