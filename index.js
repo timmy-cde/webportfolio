@@ -1,4 +1,4 @@
-function adjustBlob() {
+adjustBlob = () => {
     const profile = document.querySelector("#profile")
     const pDetails = profile.getBoundingClientRect();
     const profileX = pDetails.left + pDetails.width * 0.5;

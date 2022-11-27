@@ -1,0 +1,82 @@
+adjustBlob = () => {
+    const profile = document.querySelector("#profile")
+    const pDetails = profile.getBoundingClientRect();
+    const profileX = pDetails.left + pDetails.width * 0.5;
+    const profileY = pDetails.top + pDetails.height * 0.5;
+
+    const blob = document.querySelector("#blob-motion")
+    const bDetails = blob.getBoundingClientRect();
+    const blobX = profileX - bDetails.width * 0.5
+    const blobY = profileY - bDetails.height * 0.5
+    const blobW = pDetails.width * 1.68;
+    const blobH = pDetails.height * 1.68;
+
+    blob.style.cssText = "position:fixed;left:" + blobX + "px; top:" + blobY + "px; z-index: 1; width:" + blobW + "px; height:" + blobH + "px";
+}
+
+window.onload = window.onresize = window.onscroll = adjustBlob;
+
+
+function loadJson(callback) {
+    let data = new XMLHttpRequest();
+    data.overrideMimeType("application/json");
+    data.open('GET', './projects.json', true);
+    data.onreadystatechange = () => {
+        if(data.readyState == 4 && data.status == "200") {
+            callback(data.responseText)
+        }
+    }
+    data.send(null);
+}
+
+function init() {
+    
+    loadJson(response => {
+        let actualData = JSON.parse(response)
+        let projectDiv = document.querySelector(".card-deck")
+        let div = document.createElement('div');
+        let datas = "";
+        // console.log(actualData)
+        
+        for (let element of actualData.projects) {
+            let tools = "";
+            for (t of element.tools){
+                tools += `
+                    <span data-toggle="tooltip" data-placement="top" title="${t.name}" class="icon">
+                        <i class=${t.source}></i>
+                    </span>
+                `;
+            }
+
+            datas += `
+                <div class="card">
+                    <!-- Carousel Start-->
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src=${element.image} class="d-block w-100">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel End-->
+                    <div class="card-body">
+                        <h5 class="card-title">${element.title}</h5>
+                        <p class="card-text">${element.description}</p>
+                        <a href="${element.site}" class="btn btn-primary" role="button">Site</a>
+                        <a href="${element.code}" class="btn btn-primary"
+                            role="button">Code</a>
+                    </div>
+                    <div class="card-footer">
+                        <small>Built with:</small>
+                        ${tools}
+                    </div>
+                </div>
+            `;
+        }
+        div.innerHTML = datas
+        projectDiv.appendChild(div);
+
+    })
+}
+
+init();

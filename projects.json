@@ -1,0 +1,50 @@
+{
+    "projects": [
+        {
+            "title": "Web Portfolio",
+            "description": "This is a static website showcasing my online portfolio made during my coding bootcamp.",
+            "image": "https://miro.medium.com/max/832/0*PXVDYVOGSw-7b5dT.jpg",
+            "site": "https://timmy-cde.github.io/webportfolio/",
+            "code": "https://github.com/timmy-cde/webportfolio",
+            "tools": [
+                {
+                    "name": "HTML5",
+                    "source": "devicon-html5-plain"
+                },
+                {
+                    "name": "CSS3",
+                    "source": "devicon-css3-plain"
+                },
+                {
+                    "name": "Bootstrap",
+                    "source": "devicon-bootstrap-plain"
+                }
+            ]
+        },
+        {
+            "title": "Musicfy",
+            "description": "Musicfy is a website where a user can buy musical instruments and an admin that manages the orders and products. This is created with MERN stack.",
+            "image": "https://img.freepik.com/free-vector/online-shopping-concept-web-landing-page-digital-marketing-website-mobile-application_25819-695.jpg?w=1060&t=st=1653306639~exp=1653307239~hmac=6b31216f91f54d6b578aed92862179bb08a31b77e85cc2600c653c81afdf37b4",
+            "site": "https://mern-full-stack-app.vercel.app/",
+            "code": "https://gitlab.com/timmy-cde/mern-full-stack-app",
+            "tools": [
+                {
+                    "name": "MongoDB",
+                    "source": "devicon-mongodb-plain"
+                },
+                {
+                    "name": "ExpressJs",
+                    "source": "devicon-express-original"
+                },
+                {
+                    "name": "React",
+                    "source": "devicon-react-original"
+                },
+                {
+                    "name": "NodeJs",
+                    "source": "devicon-nodejs-plain"
+                }
+            ]
+        }
+    ]
+}
