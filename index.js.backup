@@ -36,7 +36,8 @@ function init() {
         let projectDiv = document.querySelector(".card-deck")
         let div = document.createElement('div');
         let datas = "";
-        // console.log(actualData)
+        console.log(response)
+        console.log(actualData)
         
         for (let element of actualData.projects) {
             let tools = "";
